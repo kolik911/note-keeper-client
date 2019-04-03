@@ -1,0 +1,58 @@
+<template>
+  <ul class="color-list">
+    <li v-for="(color,i) in backgroundColors" :key="i" :style="{backgroundColor: color}"></li>
+  </ul>
+</template>
+
+<script>
+export default {
+  name: "color-picker",
+  data() {
+    return {
+      backgroundColors: [
+        "#fff",
+        "#f28b82",
+        "#fbbc04",
+        "#fff475",
+        "#ccff90",
+        "#a7ffeb",
+        "#cbf0f8",
+        "#aecbfa",
+        "#d7aefb",
+        "#c79fb5",
+        "#e6c9a8",
+        "#e8eaed"
+      ]
+    };
+  }
+};
+</script>
+
+<style>
+.color-list {
+  position: absolute;
+  margin: 0;
+  /* display: flex; */
+  display: none;
+  top: -94px;
+  width: 115px;
+  flex-flow: row wrap;
+  left: 0;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  padding: 5px;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.color-list li {
+  /* display: none; */
+  width: 25px;
+  height: 25px;
+  border-radius: 30px;
+  background: #000;
+  list-style: none;
+  margin: 0 3px 3px 0;
+}
+</style>
